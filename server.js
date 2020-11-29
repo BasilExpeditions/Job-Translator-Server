@@ -13,6 +13,16 @@ server.get('/translations', (req, res) => {
   res.send('Translation object will go here')
 })
 
+server.get('/about', (req, res) => {
+  console.log(`New About GET request handled ${Date.now()}`)
+  res.send('This is the about page')
+})
+
+server.get('/submit', (req, res) => {
+  console.log(`New Submit GET request handled ${Date.now()}`)
+  res.send('Submission page')
+})
+
 server.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}...`)
 });
