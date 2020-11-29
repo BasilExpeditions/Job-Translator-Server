@@ -1,8 +1,6 @@
-# Job-Translator-Server
+# Job-Translator
 
-### Run npm install
-
-### Run npm run start
+## To setup this project please run npm install followed by npm run start.
 
 #### Dependencies being used are:
 - Express
