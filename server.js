@@ -12,9 +12,13 @@ server.set('view-engine', ejs);
 server.use('/assets', express.static('assets'));
 
 // 1. Is this normal ^ Serving my css like this
+// ANSWER: You have a reference issue
 // 2. How should i be importing my javascript and jquery for event listeners (Input storage --> Mapping through string to find keys --> Output results)
+// ANSWER: Everything should live in the assets folder so it all gets served
 // 3. I feel like serving my json object like this is bad (Can i do something like this without mongoDB or is it bad practice)
+// ANSWER: Who cares? As long as it works - only use something like mongoDB if your gonna do CRUD stuff
 // 4. Should i just store input within the jquery event listener and then map through it?
+// Jquery event listener is fine
 
 server.get('/', (req, res) => {
   console.log(`HOME GET request`)
@@ -43,7 +47,7 @@ server.listen(PORT, () => {
 const translationValues = {
   "Junior Developer": "Junior Googler",
   "Senior Developer": "Senior Googler",
-  "Lead Googler": "Lead Googler",
+  "Lead Developer": "Lead Googler",
   "Work on cutting edge technology": "Do what everyone else is doing",
   "A fast paced environment": "Your job will be constant firefighting",
   "Must be a team player": "Must not question authority",
