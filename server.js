@@ -11,24 +11,28 @@ const PORT = 1337;
 server.set('view-engine', ejs);
 server.use('/assets', express.static('assets'));
 
+// 1. Is this normal ^ Serving my css like this
+// 2. How should i be importing my javascript and jquery for event listeners (Input storage --> Mapping through string to find keys --> Output results)
+// 3. I feel like serving my json object like this is bad (Can i do something like this without mongoDB or is it bad practice)
+// 4. Should i just store input within the jquery event listener and then map through it?
 
 server.get('/', (req, res) => {
-  console.log(`HOME GET request handled ${Date.now()}`)
+  console.log(`HOME GET request`)
   res.render('home.ejs')
 });
 
 server.get('/about', (req, res) => {
-  console.log(`About GET request handled ${Date.now()}`)
+  console.log(`About GET request`)
   res.send('ABOUT')
 });
 
 server.get('/submit', (req, res) => {
-  console.log(`Submit GET request handled ${Date.now()}`)
+  console.log(`Submit GET request`)
   res.send('SUBMIT')
 });
 
 server.get('/results', (req, res) => {
-  console.log(`results GET request handled ${Date.now()}`)
+  console.log(`results GET request`)
   res.json(translationValues)
 });
 
@@ -37,6 +41,9 @@ server.listen(PORT, () => {
 });
 
 const translationValues = {
+  "Junior Developer": "Junior Googler",
+  "Senior Developer": "Senior Googler",
+  "Lead Googler": "Lead Googler",
   "Work on cutting edge technology": "Do what everyone else is doing",
   "A fast paced environment": "Your job will be constant firefighting",
   "Must be a team player": "Must not question authority",
