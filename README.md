@@ -11,7 +11,7 @@
 
 ## Idea:
 
-This project was just a fun little idea to use in practice some of the technologies that i've learned over the course taught by Joel Turnbell, An exceptional Teacher, technology enthusiast & Engineer.
+This project was just a fun little idea to use in practice some of the technologies that i've learned over the course taught by Joel Turnbell, An exceptionally skilled Teacher, Technology Enthusiast & Engineer.
 
 ## Objective:
 
