@@ -48,6 +48,7 @@ const translationValues = {
   "Junior Developer": "Junior Googler",
   "Senior Developer": "Senior Googler",
   "Lead Developer": "Lead Googler",
+  "Energetic software engineer": "Don't stop till you drop",
   "Work on cutting edge technology": "Do what everyone else is doing",
   "A fast paced environment": "Your job will be constant firefighting",
   "Must be a team player": "Must not question authority",
