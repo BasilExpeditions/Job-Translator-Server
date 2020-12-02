@@ -3,6 +3,10 @@ const server = express();
 const ejs = require('ejs');
 
 
+require('dotenv').config()
+
+console.log(process.env.API_KEY)
+
 const port = process.env.PORT || 1337;
 
 server.set('view-engine', ejs);

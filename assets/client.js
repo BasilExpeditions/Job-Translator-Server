@@ -4,6 +4,8 @@ $( document ).ready(function() {
     var app_id = config.APP_ID;
     var api_key = config.API_KEY;
 
+    console.log(process.env.API_KEY)
+
     let counter = 0;
 
     $("#translateButton").click( async (event) => {
