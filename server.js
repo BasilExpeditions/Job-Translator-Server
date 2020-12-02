@@ -3,7 +3,7 @@ const server = express();
 const ejs = require('ejs');
 
 
-process.env.PORT = 1337;
+const port = process.env.PORT || 1337;
 
 server.set('view-engine', ejs);
 server.use('/assets', express.static('assets'));
@@ -33,8 +33,8 @@ server.get('/results', (req, res) => {
   res.json(translationValues)
 });
 
-server.listen(process.env.PORT || 3000, () => {
-  console.log(`Server listening on port ${process.env.PORT}...`)
+server.listen(port, () => {
+  console.log(`Server listening on port ${port}...`)
 });
 
 
