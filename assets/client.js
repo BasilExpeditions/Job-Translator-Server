@@ -3,8 +3,6 @@ $( document ).ready(function() {
 
     var app_id = config.APP_ID;
     var api_key = config.API_KEY;
-    console.log(app_id)
-    console.log(api_key)
 
     let counter = 0;
 
@@ -37,9 +35,15 @@ $( document ).ready(function() {
 
 
     $('#getRandomJobButton').click( async (event) => {
-      await $.ajax({url: `https://api.adzuna.com/v1/api/jobs/au/search/1?app_id=${APP_ID}&app_key=${APP_KEY}&results_per_page=10&what=software%20engineer`,
+      await $.ajax({url: `https://api.adzuna.com/v1/api/jobs/au/search/1?app_id=${app_id}&app_key=${api_key}&results_per_page=20&what=software%20engineer`,
+        contentType: "application/json",
          success: function(result) {
-           console.log(result.results[0].description)
+           let stringToFormat = result.results[0].description
+           var randomJobResult = result.results[Math.floor(Math.random() * result.results.length)];
+           console.log(randomJobResult.description) // Random sample of job description
+           let regex = /(<([^>]+)>)/ig
+           let formatted = randomJobResult.description.replaceAll(regex, "")
+           $('#inputField').val(formatted)
       }})
     })
 

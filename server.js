@@ -40,16 +40,16 @@ server.listen(PORT, () => {
 
 
 const translationValues = {
-  "software engineer": "stack overflow surfer",
-  "junior developer": "basic googler",
-  "senior developer": "expert googler",
-  "lead developer": "lead googler",
+  "software engineer": "be a damn good stack overflow surfer",
+  "junior developer": "theyre looking for a basic googler",
+  "senior developer": "theyre looking for an expert googler",
+  "lead developer": "theyre looking for a lead googler",
   "energetic": "don't stop till you drop",
   "cutting edge technology": "do what everyone else is doing",
   "fast paced environment": "your job will be constant firefighting",
   "team player": "must not question authority",
   "minimal supervision": "you’ll be the one we blame when something goes wrong",
-  "agile team": "we have daily standups",
+  "agile": "we have daily standups",
   "market leader": "recently started making a profit",
   "rockstar developer": "you will work very long hours with impossible deadlines",
   "urgent need": "our other rockstar just left and no one understands the code",
