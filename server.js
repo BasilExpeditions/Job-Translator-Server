@@ -3,7 +3,7 @@ const server = express();
 const ejs = require('ejs');
 
 
-const PORT = 1337;
+process.env.PORT = 1337;
 
 server.set('view-engine', ejs);
 server.use('/assets', express.static('assets'));
@@ -33,14 +33,15 @@ server.get('/results', (req, res) => {
   res.json(translationValues)
 });
 
-server.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}...`)
+server.listen(process.env.PORT || 3000, () => {
+  console.log(`Server listening on port ${process.env.PORT}...`)
 });
 
 
 
 const translationValues = {
   "software engineer": "be a damn good stack overflow surfer",
+  "software developer": "be a damn good stack overflow surfer",
   "junior developer": "theyre looking for a basic googler",
   "senior developer": "theyre looking for an expert googler",
   "lead developer": "theyre looking for a lead googler",
