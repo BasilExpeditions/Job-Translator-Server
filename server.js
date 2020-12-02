@@ -4,21 +4,8 @@ const ejs = require('ejs');
 
 const PORT = 1337;
 
-// MIDDLEWARE is the code between the server.get and the res.render (Code in the middle)
-
-// express.static() <== in built function that comes with express to serve up our static files and lets us avoid using "next" (Simplifys code)
-
 server.set('view-engine', ejs);
 server.use('/assets', express.static('assets'));
-
-// 1. Is this normal ^ Serving my css like this
-// ANSWER: You have a reference issue
-// 2. How should i be importing my javascript and jquery for event listeners (Input storage --> Mapping through string to find keys --> Output results)
-// ANSWER: Everything should live in the assets folder so it all gets served
-// 3. I feel like serving my json object like this is bad (Can i do something like this without mongoDB or is it bad practice)
-// ANSWER: Who cares? As long as it works - only use something like mongoDB if your gonna do CRUD stuff
-// 4. Should i just store input within the jquery event listener and then map through it?
-// Jquery event listener is fine
 
 server.get('/', (req, res) => {
   console.log(`HOME GET request`)
@@ -27,12 +14,12 @@ server.get('/', (req, res) => {
 
 server.get('/about', (req, res) => {
   console.log(`About GET request`)
-  res.send('ABOUT')
+  res.render('about.ejs')
 });
 
 server.get('/submit', (req, res) => {
   console.log(`Submit GET request`)
-  res.send('SUBMIT')
+  res.render('submit.ejs')
 });
 
 server.get('/results', (req, res) => {
@@ -44,20 +31,23 @@ server.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}...`)
 });
 
+
+
 const translationValues = {
-  "Junior Developer": "Junior Googler",
-  "Senior Developer": "Senior Googler",
-  "Lead Developer": "Lead Googler",
-  "Energetic software engineer": "Don't stop till you drop",
-  "Work on cutting edge technology": "Do what everyone else is doing",
-  "A fast paced environment": "Your job will be constant firefighting",
-  "Must be a team player": "Must not question authority",
-  "Able to work with minimal supervision": "You’ll be the one we blame when something goes wrong",
-  "An agile team": "We have daily standups",
-  "A market leader": "Recently started making a profit",
-  "Rockstar developer": "You will work very long hours with impossible deadlines",
-  "We have an urgent need": "Our other rockstar just left and no one understands the code",
-  "Dynamic environment": "Our leadership keeps changing priorities",
-  "Self starter": "We have no process",
-  "Passionate": "Perseveres through regular death marches"
+  "software engineer": "stack overflow surfer",
+  "junior developer": "junior Googler",
+  "senior developer": "senior Googler",
+  "lead developer": "lead Googler",
+  "energetic": "don't stop till you drop",
+  "cutting edge technology": "do what everyone else is doing",
+  "fast paced environment": "your job will be constant firefighting",
+  "team player": "must not question authority",
+  "minimal supervision": "you’ll be the one we blame when something goes wrong",
+  "agile team": "we have daily standups",
+  "market leader": "recently started making a profit",
+  "rockstar developer": "you will work very long hours with impossible deadlines",
+  "urgent need": "our other rockstar just left and no one understands the code",
+  "dynamic environment": "our leadership keeps changing priorities",
+  "self starter": "we have no process",
+  "passionate": "perseveres through regular death marches"
 }
