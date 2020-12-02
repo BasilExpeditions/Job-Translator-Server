@@ -1,6 +1,8 @@
 $( document ).ready(function() {
     console.log( "ready!" );
 
+    let counter = 0;
+
     $("#translateButton").click( async (event) => {
       const jobDescription = $('#inputField').val().toLowerCase()
 
@@ -11,6 +13,7 @@ $( document ).ready(function() {
       const keys = Object.keys(result);
 
         keys.map((x, index) => {
+          counter++
           if(jobDescription.includes(x)) {
 
             console.log(`MATCH: Key: ${x} Value: ${values[index]}`)
@@ -18,13 +21,12 @@ $( document ).ready(function() {
 
             $('#results ul').append(`<li>${values[index]}</li>`)
           }
-          if(jobDescription.includes(x) != null) {
-            $('#results ul').append("<li>I couldn't find any matches</li>")
-          }
         }
-        )
-
+      )
+      if (counter == keys.length) {
+        console.log('finished')
+        return $('#results ul').append("<li>No more matches</li>")
+      }
       }})
     });
-
 });
