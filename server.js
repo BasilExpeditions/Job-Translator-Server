@@ -2,6 +2,7 @@ const express = require('express');
 const server = express();
 const ejs = require('ejs');
 
+
 const PORT = 1337;
 
 server.set('view-engine', ejs);
@@ -40,9 +41,9 @@ server.listen(PORT, () => {
 
 const translationValues = {
   "software engineer": "stack overflow surfer",
-  "junior developer": "junior Googler",
-  "senior developer": "senior Googler",
-  "lead developer": "lead Googler",
+  "junior developer": "basic googler",
+  "senior developer": "expert googler",
+  "lead developer": "lead googler",
   "energetic": "don't stop till you drop",
   "cutting edge technology": "do what everyone else is doing",
   "fast paced environment": "your job will be constant firefighting",
