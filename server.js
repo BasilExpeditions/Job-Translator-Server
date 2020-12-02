@@ -22,6 +22,11 @@ server.get('/submit', (req, res) => {
   res.render('submit.ejs')
 });
 
+server.get('/translations', (req, res) => {
+  console.log(`Submit GET request`)
+  res.render('translations.ejs')
+});
+
 server.get('/results', (req, res) => {
   console.log(`results GET request`)
   res.json(translationValues)
