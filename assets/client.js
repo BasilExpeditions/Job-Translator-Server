@@ -9,7 +9,7 @@ $( document ).ready(function() {
       // Scroll animation on translate button
       $("html, body").animate({
         scrollTop: $('html, body').get(0).scrollHeight
-      }, 2000);
+      }, 2500);
 
       // 'https://job-translator.herokuapp.com/results' to be inserted instead of local
 
