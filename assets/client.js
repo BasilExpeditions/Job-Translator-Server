@@ -12,7 +12,6 @@ $( document ).ready(function() {
         scrollTop: $('html, body').get(0).scrollHeight
       }, 2500);
 
-
       // For this to work locally, change the below url to 'http://localhost:1337/results'
       // https://job-translator.herokuapp.com/results
 

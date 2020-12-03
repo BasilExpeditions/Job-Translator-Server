@@ -10,7 +10,7 @@ server.set('view-engine', ejs);
 server.use('/assets', express.static('assets'));
 
 server.get('/', (req, res) => {
-  console.log(`HOME GET request`)
+  console.log(`Home GET request`)
   res.render('home.ejs', dotenv.parsed)
 });
 
@@ -25,17 +25,17 @@ server.get('/submit', (req, res) => {
 });
 
 server.get('/translations', (req, res) => {
-  console.log(`Submit GET request`)
+  console.log(`Translations GET request`)
   res.render('translations.ejs')
 });
 
 server.get('/marquis', (req, res) => {
-  console.log(`Submit GET request`)
+  console.log(`Marquis GET request`)
   res.render('easterEgg.ejs')
 });
 
 server.get('/results', (req, res) => {
-  console.log(`results GET request`)
+  console.log(`Results GET request`)
   res.json(values.translationValues)
 });
 
