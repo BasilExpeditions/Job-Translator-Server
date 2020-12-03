@@ -1,11 +1,6 @@
 $( document ).ready(function() {
     console.log( "ready!" );
 
-    var app_id = config.APP_ID;
-    var api_key = config.API_KEY;
-
-    console.log(process.env.API_KEY)
-
     let counter = 0;
 
     $("#translateButton").click( async (event) => {
@@ -24,20 +19,20 @@ $( document ).ready(function() {
             console.log(`MATCH: Key: ${x} Value: ${values[index]}`)
 
 
-            $('#results ul').append(`<li><strong>${x}</strong> = ${values[index]}</li>`)
+            $('#results ul').append(`<li><strong>${x}</strong> &rarr; ${values[index]}</li>`)
           }
         }
       )
       if (counter == keys.length) {
         console.log('finished')
-        return $('#results ul').append("<strong>No more matches</strong>")
+        return $('#results ul').append("<strong style='color:teal;'>No more matches</strong>")
       }
       }})
     });
 
 
     $('#getRandomJobButton').click( async (event) => {
-      await $.ajax({url: `https://api.adzuna.com/v1/api/jobs/au/search/1?app_id=${app_id}&app_key=${api_key}&results_per_page=20&what=software%20engineer`,
+      await $.ajax({url: `https://api.adzuna.com/v1/api/jobs/au/search/1?app_id=6969f274&app_key=985462037ccb638ed824f8b40b5b4986&results_per_page=20&what=software%20engineer`,
         contentType: "application/json",
          success: function(result) {
            let stringToFormat = result.results[0].description

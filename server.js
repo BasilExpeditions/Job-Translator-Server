@@ -1,11 +1,7 @@
 const express = require('express');
 const server = express();
 const ejs = require('ejs');
-
-
-require('dotenv').config()
-
-console.log(process.env.API_KEY)
+const dotenv = require('dotenv').config()
 
 const port = process.env.PORT || 1337;
 
@@ -14,7 +10,7 @@ server.use('/assets', express.static('assets'));
 
 server.get('/', (req, res) => {
   console.log(`HOME GET request`)
-  res.render('home.ejs')
+  res.render('home.ejs', dotenv.parsed)
 });
 
 server.get('/about', (req, res) => {
