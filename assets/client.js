@@ -2,7 +2,7 @@ $( document ).ready(function() {
 
     let counter = 0;
 
-    const dummyData = "hello i am here"
+    const dummyData = "Prestige WorldWide has an urgent need to hire a talented lead developer who shows an energetic spirit and can demonstrate their knowledge using cutting edge technology such as C#, React, Node, Assembly & has a strong foundation in Test Driven Development. The right candidate will be a team player who loves working in a fast paced environment with minimal supervision. Our team is passionate and is currently using agile as a day to day process. This job entails a dynamic environment with plenty of great benefits and perks. A bonus to have is web design & 1000 years experience coding."
 
     $("#translateButton").click( async (event) => {
       const jobDescription = $('#inputField').val().toLowerCase()
