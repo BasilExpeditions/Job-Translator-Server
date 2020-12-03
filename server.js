@@ -48,7 +48,7 @@ const translationValues = {
   "software developer": "be a damn good stack overflow surfer",
   "junior developer": "theyre looking for a basic googler",
   "senior developer": "theyre looking for an expert googler",
-  "lead developer": "theyre looking for a lead googler",
+  "lead developer": "theyre looking for a lead googler to lead a team of googlers",
   "energetic": "don't stop till you drop",
   "cutting edge technology": "do what everyone else is doing",
   "fast paced environment": "your job will be constant firefighting",
