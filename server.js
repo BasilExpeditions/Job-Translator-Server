@@ -56,5 +56,6 @@ const translationValues = {
   "urgent need": "our other rockstar just left and no one understands the code",
   "dynamic environment": "our leadership keeps changing priorities",
   "self starter": "we have no process",
-  "passionate": "perseveres through regular death marches"
+  "passionate": "perseveres through regular death marches",
+  "web design": "how good are you at downloading themes"
 }

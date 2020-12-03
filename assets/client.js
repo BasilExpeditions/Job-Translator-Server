@@ -6,7 +6,7 @@ $( document ).ready(function() {
     $("#translateButton").click( async (event) => {
       const jobDescription = $('#inputField').val().toLowerCase()
 
-      await $.ajax({url: "http://localhost:1337/results", success: function(result) {
+      await $.ajax({url: "http://localhost:1337/results" || process.env.URL + '/results', success: function(result) {
 
       const values = Object.values(result)
 
