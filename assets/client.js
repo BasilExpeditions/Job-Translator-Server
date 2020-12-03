@@ -13,7 +13,7 @@ $( document ).ready(function() {
 
       // 'https://job-translator.herokuapp.com/results' to be inserted instead of local
 
-      await $.ajax({url: "http://localhost:1337/results", success: function(result) {
+      await $.ajax({url: "https://job-translator.herokuapp.com/results", success: function(result) {
 
       const values = Object.values(result)
 
