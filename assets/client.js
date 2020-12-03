@@ -19,7 +19,7 @@ $( document ).ready(function() {
             console.log(`MATCH: Key: ${x} Value: ${values[index]}`)
 
 
-            $('#results ul').append(`<li><strong>${x}</strong> &rarr; ${values[index]}</li>`)
+            $('#results ul').append(`<li style='text-decoration: none;'><strong>${x}</strong> &rarr; ${values[index]}</li>`)
           }
         }
       )
