@@ -29,6 +29,11 @@ server.get('/translations', (req, res) => {
   res.render('translations.ejs')
 });
 
+server.get('/marquis', (req, res) => {
+  console.log(`Submit GET request`)
+  res.render('easterEgg.ejs')
+});
+
 server.get('/results', (req, res) => {
   console.log(`results GET request`)
   res.json(values.translationValues)
