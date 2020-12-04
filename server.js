@@ -29,8 +29,8 @@ server.get('/translations', (req, res) => {
   res.render('translations.ejs')
 });
 
-server.get('/marquis', (req, res) => {
-  console.log(`Marquis GET request`)
+server.get('/gilbert', (req, res) => {
+  console.log(`Gilbert GET request`)
   res.render('easterEgg.ejs')
 });
 
