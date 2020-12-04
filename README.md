@@ -2,6 +2,10 @@
 
 ## To setup this project please run npm install followed by npm run start.
 
+#### TechStack:
+- Node
+- Express
+
 #### Dependencies being used are:
 - Express
 - Ejs
