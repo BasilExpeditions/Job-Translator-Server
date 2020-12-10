@@ -7,7 +7,6 @@
 - Express
 
 #### Dependencies being used are:
-- Express
 - Ejs
 
 #### Dev Dependencies
